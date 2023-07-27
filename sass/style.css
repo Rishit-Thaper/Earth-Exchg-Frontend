@@ -76,6 +76,7 @@ header .logo img {
 @media screen and (max-width: 768px) {
   header .logo img {
     padding-left: 10px;
+    max-width: 30%;
   }
 }
 header .button {
@@ -206,5 +207,55 @@ header .button #menu {
     height: 100%;
     background-position: center;
     padding: 90px 3%;
+  }
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: center;
+  background-image: url("../Rest/banner-3.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  margin: 3rem;
+  padding: 2rem;
+  border-radius: 15px;
+}
+.feature-grid .feature {
+  border: 1px solid rgba(128, 128, 128, 0.495);
+  color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+.feature-grid .feature i {
+  font-size: 4rem;
+  color: #18BB4E;
+}
+.feature-grid .feature h3 {
+  padding: 1rem 0 1rem 0;
+  font-size: 1.5rem;
+}
+.feature-grid .feature:hover {
+  background-color: rgba(48, 48, 49, 0.5647058824);
+}
+.feature-grid .feature:hover i {
+  color: #ffffff;
+}
+.feature-grid .feature:hover h3 {
+  color: #18BB4E;
+}
+@media screen and (max-width: 1246px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 960px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    padding: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
