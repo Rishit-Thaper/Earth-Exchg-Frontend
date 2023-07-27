@@ -4,7 +4,7 @@
 @import "colors";
 
 //variables
-$logo-max-width: 40%;
+$logo-max-width: 35%;
 
 *{
     padding: 0;
@@ -88,7 +88,6 @@ header{
         @include md{
             padding-left: 10px;
             max-width: 30%;
-
         }
 
       }
@@ -113,6 +112,9 @@ header{
                 margin-right: 0;
                 font-size: 14px;
             }
+            @include custom(370px){
+                font-size: 12px;
+            }
         }
         #menu{
             font-size: 25px;
@@ -127,9 +129,10 @@ header{
         }
     }
     @include xl{
-        padding: 10px 20px 10px 0;
+        padding: 10px 10px 10px 0;
         transition: .3s;
     }
+
 
 }
 
@@ -205,52 +208,104 @@ header{
 }
 
 //feature-section
-.feature-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:30px;
-    align-items: center;
-    background-image: url('../Rest/banner-3.jpg');
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    margin: 3rem;
-    padding: 2rem;
-    border-radius: 15px;
-
-    .feature{
-        border: 1px solid rgba(128, 128, 128, 0.495);
-        color: $a-color;
-        padding: 2.5rem;
+.feature-section{
+    margin-top: 3rem;
+    padding: 0 2rem 3rem 2rem;
+    .feature-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:30px;
+        align-items: center;
+        background-image: url('../Rest/banner-3.jpg');
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        margin-top: 3rem;
+        padding: 2rem;
         border-radius: 15px;
-        transition: 0.3s ease-in-out;
-        i{
-            font-size: 4rem;
-            color: $color-1;
-        }
-        
-        h3{
-            padding: 1rem 0 1rem 0;
-            font-size: 1.5rem;
-        }
-        &:hover{
-            background-color: $color-3;
-        }
-
-        &:hover i{
+    
+        .feature{
+            border: 1px solid rgba(128, 128, 128, 0.495);
             color: $a-color;
+            padding: 2.5rem;
+            border-radius: 15px;
+            transition: 0.3s ease-in-out;
+            i{
+                font-size: 4rem;
+                color: $color-1;
+            }
+            
+            h3{
+                padding: 1rem 0 1rem 0;
+                font-size: 1.5rem;
+            }
+            &:hover{
+                background-color: $color-3;
+            }
+    
+            &:hover i{
+                color: $a-color;
+            }
+            &:hover h3{
+                color: $color-1;
+            }
         }
-        &:hover h3{
-            color: $color-1;
-        }
-    }
 
-    @include custom(1246px){
-        grid-template-columns: repeat(2,1fr);
+    
+        @include custom(1246px){
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include lg{
+            grid-template-columns: 1fr;
+            margin: 1rem;
+            padding: 1rem;
+        }
+
     }
-    @include lg{
-        grid-template-columns: 1fr;
-        margin: 1rem;
-        padding: 1rem;
+    @include sm{
+        padding: 0 1rem 2rem 1rem;
+        margin-top: 2rem;
     }
 }
+
+.dealing-section{
+    padding: 3rem;
+    background-image: url('../Rest/banner-2.jpg');
+    background-position: center;
+    background-size: cover;
+    h2{
+        text-align: center;
+        font-size: 3rem;
+        color: $a-color;
+        padding:  0 3rem 3rem 3rem;
+        @include sm{
+            padding:  0 1rem 1rem 1rem;
+            font-size: 2rem;
+        }
+    }
+    .dealing-grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 25px;
+        text-align: center;
+        justify-items: center;
+        .terms{
+            p{
+                font-size: 4rem;
+                color: $color-1;
+            }
+            h3{
+                margin-top: 1rem;
+                color: $a-color;
+            }
+        }
+        @include md{
+            grid-template-columns: 1fr;
+        }
+    }
+
+}
+
+
+
+

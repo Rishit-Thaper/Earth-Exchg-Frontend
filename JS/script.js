@@ -53,16 +53,23 @@ function toggleMenu() {
 
 // Create an Intersection Observer
 
-const featureItems = document.querySelectorAll('.feature');
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate__animated', 'animate__fadeIn');
-      observer.unobserve(entry.target);
-    }
+function animateOnScroll(elements) {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeIn');
+        observer.unobserve(entry.target);
+      }
+    });
   });
-});
 
-featureItems.forEach((item) => {
-  observer.observe(item);
-});
+  elements.forEach((item) => {
+    observer.observe(item);
+  });
+}
+
+const featureSections = document.querySelectorAll('.feature');
+const dealingSections = document.querySelectorAll('.dealing-section');
+
+animateOnScroll(featureSections);
+animateOnScroll(dealingSections);
