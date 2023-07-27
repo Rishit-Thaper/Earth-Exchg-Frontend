@@ -1,5 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400&family=Poppins:wght@400;700;900&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Exo+2&family=Exo:wght@500;600;700&family=Playfair+Display&family=Roboto:wght@400;700&display=swap');
 @import "breakpoints";
-@import "colors";
 @import "mixins";
+@import "colors";
 
+//variables
+$logo-max-width: 40%;
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Exo;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $body-color;
+
+}
+
+//header-section
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 10%;
+
+    .nav-menu{
+        display: flex;
+
+        a{
+            padding: 10px 20px;
+            color: $a-color;
+            transition: ease-in-out 0.3s;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-weight: 500;
+            transition: background-color 0.3s ease-in-out;
+            &:hover{
+                color: $hover-color-2;
+            }
+            @include lg{
+                &:hover{
+                    color: #932325;
+                }
+            }
+        }
+
+        li{
+            @include lg{
+                margin-bottom: 8px;
+                display: block;
+            }
+        }
+
+        @include lg{
+            flex-direction: column;
+            top: 100%;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            justify-content: center;
+            background-color: $button-color;
+            display: none;
+            // transition: transform 1s ease;
+            transform: translateY(-200px);
+            &.active{
+                display: flex;
+            }
+        }
+    }
+    
+    .logo {
+      img {
+        max-width: $logo-max-width;
+        height: auto;
+        @include md{
+            padding-left: 10px;
+        }
+      }
+    }
+
+    .button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+            @include commonButton(10px, 30px, $hover-color-2);
+            color: $a-color;
+            font-weight: 500;
+            font-size: 16px;
+            margin-right: 15px;
+            @include lg{
+                @include commonButton(10px, 30px, $hover-color-1);
+                margin-right: 0;
+            }
+            @include sm{
+                @include commonButton(5px, 15px, $hover-color-1);
+                margin-right: 0;
+                font-size: 14px;
+            }
+        }
+        #menu{
+            font-size: 25px;
+            cursor: pointer;
+            z-index: 1001;
+            color: $a-color;
+            display: none;
+            @include lg{
+                display: block;
+                margin-left: 15px;
+            }
+        }
+    }
+    @include xl{
+        padding: 10px 20px 10px 0;
+        transition: .3s;
+    }
+
+}
+
+
+// home-section
+.home{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Rest/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 40px 6%;
+
+    .animate__animated.animate__fadeIn{
+        animation-duration: 2s;
+    }
+    .home-content{
+        // border: 2px solid white;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        gap: 2rem;
+        img{
+            max-width: 100%;
+            filter: drop-shadow(7px 15px 7px #00000090);
+        }
+        .child{
+            
+            h1{
+                font-size: 3rem;
+                color: $a-color;
+                span{
+                    color: $color-2;
+                    text-transform: uppercase;
+                    font-size: 4rem;
+                }
+            }
+            
+            p{
+                color: $a-color;
+                line-height: 30px;
+                margin: 1rem 0 1rem 0;
+            }
+
+            button{
+                background: none;
+                outline: none;
+                padding: 0.4rem 0.8rem;
+                margin: 1rem 0 1rem 0;
+                color: $color-1;
+                border: 2px solid $color-1;
+                border-radius: 10px;
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+
+                &:hover{
+                    background-color: $color-1;
+                    color: $a-color;
+                }
+            }
+
+        }
+        @include lg{
+            grid-template-columns: 1fr;
+            height: 100%;
+            background-position: center;
+            padding: 90px 3%;
+        }
+    }
+}
+
+//feature-section
+.feature-section{
+    
+}
