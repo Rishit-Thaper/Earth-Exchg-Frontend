@@ -312,4 +312,192 @@ header .button #menu {
   .dealing-section .dealing-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.merged-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 25px;
+  margin: 3rem;
+}
+.merged-section .registration-section, .merged-section .contact-section {
+  border: 1px solid rgba(128, 128, 128, 0.658);
+  border-radius: 15px;
+}
+.merged-section .registration-section {
+  padding: 2rem;
+  background-image: url("../Rest/banner-4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.merged-section .registration-section h4 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+@media screen and (max-width: 480px) {
+  .merged-section .registration-section h4 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+}
+.merged-section .registration-section .terms {
+  padding: 1.5rem 1rem;
+  color: #ffffff;
+}
+.merged-section .registration-section .terms i {
+  font-size: 3rem;
+  color: #53ADE4;
+}
+@media screen and (max-width: 480px) {
+  .merged-section .registration-section .terms i {
+    font-size: 2.5rem;
+  }
+}
+.merged-section .registration-section .terms p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 480px) {
+  .merged-section .registration-section .terms p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .merged-section .registration-section {
+    padding: 1rem;
+  }
+}
+.merged-section .contact-section {
+  color: #ffffff;
+  padding: 2rem;
+  background-color: rgba(26, 26, 26, 0.379);
+}
+.merged-section .contact-section h4 {
+  font-size: 2rem;
+}
+.merged-section .contact-section .detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 2rem;
+}
+.merged-section .contact-section .detail-grid .contact {
+  border: 1px solid rgba(128, 128, 128, 0.56);
+  padding: 2rem;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.merged-section .contact-section .detail-grid .contact a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.merged-section .contact-section .detail-grid .contact i {
+  font-size: 3rem;
+}
+.merged-section .contact-section .detail-grid .contact p {
+  margin: 1rem 0 0.6rem 0;
+  font-size: 1.5rem;
+}
+.merged-section .contact-section .detail-grid .whatsapp p {
+  color: #18BB4E;
+  transition: ease-in-out 0.3s;
+}
+.merged-section .contact-section .detail-grid .whatsapp a {
+  transition: ease-in-out 0.3s;
+}
+.merged-section .contact-section .detail-grid .whatsapp:hover {
+  background-color: #18BB4E;
+}
+.merged-section .contact-section .detail-grid .whatsapp:hover i {
+  color: #ffffff;
+}
+.merged-section .contact-section .detail-grid .whatsapp:hover p {
+  color: #ffffff;
+}
+.merged-section .contact-section .detail-grid .whatsapp:hover a {
+  color: #131416;
+}
+.merged-section .contact-section .detail-grid .mail p {
+  color: rgb(224, 27, 27);
+  transition: ease-in-out 0.3s;
+}
+.merged-section .contact-section .detail-grid .mail a {
+  transition: ease-in-out 0.3s;
+}
+.merged-section .contact-section .detail-grid .mail:hover {
+  background-color: rgb(224, 27, 27);
+}
+.merged-section .contact-section .detail-grid .mail:hover i {
+  color: #ffffff;
+}
+.merged-section .contact-section .detail-grid .mail:hover p {
+  color: #ffffff;
+}
+.merged-section .contact-section .detail-grid .mail:hover a {
+  color: #131416;
+}
+.merged-section .contact-section .detail-grid .telegram p {
+  color: #53ADE4;
+  transition: ease-in-out 0.3s;
+}
+.merged-section .contact-section .detail-grid .telegram a {
+  transition: ease-in-out 0.3s;
+}
+.merged-section .contact-section .detail-grid .telegram:hover {
+  background-color: #53ADE4;
+}
+.merged-section .contact-section .detail-grid .telegram:hover i {
+  color: #ffffff;
+}
+.merged-section .contact-section .detail-grid .telegram:hover p {
+  color: #ffffff;
+}
+.merged-section .contact-section .detail-grid .telegram:hover a {
+  color: #131416;
+}
+.merged-section .contact-section .detail-grid .instagram p {
+  color: rgb(231, 30, 184);
+  transition: ease-in-out 0.3s;
+}
+.merged-section .contact-section .detail-grid .instagram a {
+  transition: ease-in-out 0.3s;
+}
+.merged-section .contact-section .detail-grid .instagram:hover {
+  background-color: rgb(231, 30, 184);
+}
+.merged-section .contact-section .detail-grid .instagram:hover i {
+  color: #ffffff;
+}
+.merged-section .contact-section .detail-grid .instagram:hover p {
+  color: #ffffff;
+}
+.merged-section .contact-section .detail-grid .instagram:hover a {
+  color: #131416;
+}
+@media screen and (max-width: 768px) {
+  .merged-section .contact-section .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  .merged-section .contact-section {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .merged-section {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  .merged-section {
+    margin: 1.5rem;
+  }
+}
+
+.why-us-1, .why-us-2 {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

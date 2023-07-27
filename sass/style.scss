@@ -306,6 +306,114 @@ header{
 
 }
 
+.merged-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 25px;
+    margin: 3rem;
 
+    .registration-section, .contact-section{
+        border: 1px solid rgba(128, 128, 128, 0.658);
+        border-radius: 15px;
+    }
+    .registration-section{
+        padding: 2rem;
+        background-image: url('../Rest/banner-4.jpg');
+        background-size: cover;
+        background-position: center;
+        h4{
+            font-size: 2rem;
+            color: $a-color;
+            @include sm{
+                font-size: 1.5rem;
+                margin-top: 1rem;
+            }
+        }
+        .terms{
+            padding: 1.5rem 1rem;
+            color: $a-color;
+            i{
+                font-size: 3rem;
+                color: $color-2;
+                @include sm{
+                    font-size: 2.5rem;
+                }
+            }
+            p{
+                margin-top: 1rem;
+                font-size: 1.2rem;
+                @include sm{
+                    font-size: 1rem;
+                }
+            }
+        }
+        @include sm{
+            padding: 1rem;
+        }
+    }
 
+    .contact-section{
+        color: $a-color;
+        padding: 2rem;
+        background-color: rgba(26, 26, 26, 0.379);
+        h4{
+            font-size: 2rem;
+        }
+        .detail-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 2rem;
+            
+            .contact{
+                border: 1px solid rgba(128, 128, 128, 0.56);
+                padding: 2rem;
+                transition: ease-in-out 0.3s;
+                cursor: pointer;
+                border-radius: 15px;
+                a{
+                    text-decoration: none;
+                    color: $a-color;    
+                }
+                i{
+                    font-size: 3rem;
+                }
+                p{
+                    margin: 1rem 0 0.6rem 0;
+                    font-size: 1.5rem;
+                }
+            }
 
+            .whatsapp{
+                @include hoverEffect($color-1)
+            }
+            .mail{
+                @include hoverEffect(rgb(224, 27, 27))
+            }
+            .telegram{
+                @include hoverEffect($color-2);
+            }
+            .instagram{
+                @include hoverEffect(rgb(231, 30, 184))
+            }
+            @include md{
+                grid-template-columns: 1fr;
+            }
+        }
+        @include sm{
+            padding: 1rem;
+        }
+    }
+    @include lg{
+        grid-template-columns: 1fr;
+    }
+    @include sm{
+        margin: 1.5rem;
+    }
+}
+
+// <!-- why-us-section -->
+.why-us-1, .why-us-2{
+    @include flexLayout();
+}

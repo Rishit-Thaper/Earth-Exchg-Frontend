@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         navbar.style.transition = "background-color 0.3s ease"; 
         navbar.style.backgroundColor = isNavbarTransparent
           ? "transparent"
-          : "#303031"; 
+          : "#131416"; 
       });
     }
   }
@@ -70,6 +70,10 @@ function animateOnScroll(elements) {
 
 const featureSections = document.querySelectorAll('.feature');
 const dealingSections = document.querySelectorAll('.dealing-section');
-
+const registerSections = document.querySelectorAll('.registration-section');
+const contactSections = document.querySelectorAll('.contact-section');
 animateOnScroll(featureSections);
 animateOnScroll(dealingSections);
+animateOnScroll(registerSections);
+animateOnScroll(contactSections);
+

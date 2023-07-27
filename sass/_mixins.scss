@@ -22,8 +22,30 @@
         }
 }
 
-@mixin flex-center {
+@mixin hoverEffect($color){
+    p{
+        color: $color;
+        transition: ease-in-out 0.3s;
+    }
+    a{
+        transition: ease-in-out 0.3s;
+
+    }
+    &:hover{
+        background-color: $color;
+    }
+    &:hover i{
+        color: $a-color;
+    }
+    &:hover p{
+        color: $a-color;
+    }
+    &:hover a{
+        color: $body-color;
+    }
+}
+
+@mixin flexLayout{
     display: flex;
-    align-items: center;
     justify-content: center;
-  }
+}
