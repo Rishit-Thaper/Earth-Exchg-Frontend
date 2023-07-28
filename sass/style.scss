@@ -414,6 +414,104 @@ header{
 }
 
 // <!-- why-us-section -->
-.why-us-1, .why-us-2{
-    @include flexLayout();
+.whyus-section{
+    h4{
+        color: $a-color;
+        text-align: center;
+        font-size: 3rem;    
+    }
+    .why-us-1, .why-us-2, .why-us-3{
+        @include flexLayout();
+        align-items: center;
+        border: 1px solid rgba(128, 128, 128, 0.466);
+        margin: 1.5rem;
+        background-image: url('../Rest/banner-2.jpg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 15px;
+        padding: 2rem;
+        color: $a-color;
+        img{
+            max-width: 100%;
+            width: 25%;
+            @include lg{
+                width: 50%;
+            }
+            @include sm{
+                width: 75%;
+            }
+        }
+        p{
+            font-size: 1.2rem;
+            padding: 3rem;
+            text-align: justify;
+            line-height: 40px;
+            @include lg{
+                padding: 1.5rem;
+            }
+
+            @include sm{
+                padding: 1rem;
+                line-height: 30px;
+                font-size: 1rem;
+            }
+        }
+        @include sm{
+            padding: 1rem;
+            margin: 1rem;
+        }
+    }
+    .why-us-1, .why-us-3{
+        @include lg{
+            flex-direction: column-reverse;
+        }
+    }
+    .why-us-2{
+        @include lg{
+            flex-direction: column;
+        }
+    }
+}
+.footer-section{
+    padding: 2rem;
+    p{
+        text-align: center;
+        color: $color-1;
+    }
+    .footer-grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        justify-items: center;
+        gap: 25px;
+
+        .footer-menu, .footer-contact{
+
+            h5{
+                font-size: 1.3rem;
+                color: $color-1;
+            }
+            ul{
+                margin-top: 1rem;
+                list-style: none;
+            }
+            li{
+                margin-bottom: 1rem;
+                a{
+                    text-decoration: none;
+                    color: $a-color;
+                    transition: ease-in-out 0.3s;
+
+                    &:hover{
+                        color: $color-1;
+                    }
+                }
+            }
+
+        }
+        @include md{
+            grid-template-columns: 1fr;
+            justify-items: left;
+        }
+    }
 }
