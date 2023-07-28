@@ -72,8 +72,9 @@ const featureSections = document.querySelectorAll('.feature');
 const dealingSections = document.querySelectorAll('.dealing-section');
 const registerSections = document.querySelectorAll('.registration-section');
 const contactSections = document.querySelectorAll('.contact-section');
+const whyusSection = document.querySelectorAll('.whyus-section');
 animateOnScroll(featureSections);
 animateOnScroll(dealingSections);
 animateOnScroll(registerSections);
 animateOnScroll(contactSections);
-
+animateOnScroll(whyusSection)
