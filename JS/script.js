@@ -73,8 +73,12 @@ const dealingSections = document.querySelectorAll('.dealing-section');
 const registerSections = document.querySelectorAll('.registration-section');
 const contactSections = document.querySelectorAll('.contact-section');
 const whyusSection = document.querySelectorAll('.whyus-section');
+const siteSection = document.querySelectorAll('.flagship-section');
+const paymentSection = document.querySelectorAll('.payment-section');
 animateOnScroll(featureSections);
 animateOnScroll(dealingSections);
 animateOnScroll(registerSections);
 animateOnScroll(contactSections);
-animateOnScroll(whyusSection)
+animateOnScroll(whyusSection);
+animateOnScroll(siteSection);
+animateOnScroll(paymentSection);

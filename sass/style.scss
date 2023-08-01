@@ -4,7 +4,7 @@
 @import "colors";
 
 //variables
-$logo-max-width: 35%;
+$logo-max-width: 40%;
 
 *{
     padding: 0;
@@ -71,7 +71,7 @@ header{
             height: 200px;
             position: absolute;
             justify-content: center;
-            background-color: $button-color;
+            background-color: $color-2;
             display: none;
             // transition: transform 1s ease;
             transform: translateY(-200px);
@@ -420,7 +420,7 @@ header{
                 @include hoverEffect(rgb(224, 27, 27))
             }
             .telegram{
-                @include hoverEffect($color-2);
+                @include hoverEffect($color-4);
             }
             .instagram{
                 @include hoverEffect(rgb(231, 30, 184))
@@ -500,6 +500,67 @@ header{
         }
     }
 }
+
+
+// flagship-section
+
+.site-section{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+    padding: 2rem;
+
+    h4{
+        text-align: center;
+        color: $a-color;
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .flagship-section{
+
+        border-radius: 15px;
+        border: 1px solid rgba(128, 128, 128, 0.466);
+
+        .sites{
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(3,1fr);
+
+            .site{
+                text-align: center;
+                padding: 1.5rem;
+
+                img{
+                    width: 100%;
+                }
+
+                a{
+                    color: $a-color;
+                }
+            }
+            @include sm{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+    .payment-section{
+        border: 1px solid rgba(128, 128, 128, 0.466);
+        border-radius: 15px;
+        padding: 1.5rem;
+        text-align: center;
+        img{
+            max-width: 100%;
+            width: 90%;
+        }
+    }
+    @include lg{
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+
 .footer-section{
     padding: 2rem;
     p{

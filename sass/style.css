@@ -40,7 +40,7 @@ header .nav-menu a {
   transition: background-color 0.3s ease-in-out;
 }
 header .nav-menu a:hover {
-  color: #2478ad;
+  color: #911e21;
 }
 @media screen and (max-width: 960px) {
   header .nav-menu a:hover {
@@ -61,7 +61,7 @@ header .nav-menu a:hover {
     height: 200px;
     position: absolute;
     justify-content: center;
-    background-color: #53ADE4;
+    background-color: #eb1839;
     display: none;
     transform: translateY(-200px);
   }
@@ -70,7 +70,7 @@ header .nav-menu a:hover {
   }
 }
 header .logo img {
-  max-width: 35%;
+  max-width: 40%;
   height: auto;
 }
 @media screen and (max-width: 768px) {
@@ -87,7 +87,7 @@ header .button {
 header .button button {
   border: none;
   padding: 10px 30px;
-  background-color: #53ADE4;
+  background-color: #eb1839;
   cursor: pointer;
   transition: ease-in-out 0.3s;
   border-radius: 5px;
@@ -97,13 +97,13 @@ header .button button {
   margin-right: 15px;
 }
 header .button button:hover {
-  background-color: #2478ad;
+  background-color: #911e21;
 }
 @media screen and (max-width: 960px) {
   header .button button {
     border: none;
     padding: 10px 30px;
-    background-color: #53ADE4;
+    background-color: #eb1839;
     cursor: pointer;
     transition: ease-in-out 0.3s;
     border-radius: 5px;
@@ -117,7 +117,7 @@ header .button button:hover {
   header .button button {
     border: none;
     padding: 5px 15px;
-    background-color: #53ADE4;
+    background-color: #eb1839;
     cursor: pointer;
     transition: ease-in-out 0.3s;
     border-radius: 5px;
@@ -204,7 +204,7 @@ header .button #menu {
   color: #ffffff;
 }
 .home .home-content .child h1 span {
-  color: #53ADE4;
+  color: #eb1839;
   text-transform: uppercase;
   font-size: 4rem;
 }
@@ -271,7 +271,7 @@ header .button #menu {
   font-size: 1.5rem;
 }
 .feature-section .feature-grid .feature:hover {
-  background-color: rgba(48, 48, 49, 0.5647058824);
+  background-color: rgba(36, 36, 41, 0.5647058824);
 }
 .feature-section .feature-grid .feature:hover i {
   color: #ffffff;
@@ -370,7 +370,7 @@ header .button #menu {
 }
 .merged-section .registration-section .terms i {
   font-size: 3rem;
-  color: #53ADE4;
+  color: #eb1839;
 }
 @media screen and (max-width: 480px) {
   .merged-section .registration-section .terms i {
@@ -584,6 +584,60 @@ header .button #menu {
 @media screen and (max-width: 960px) {
   .whyus-section .why-us-2 {
     flex-direction: column;
+  }
+}
+
+.site-section {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  padding: 2rem;
+}
+.site-section h4 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.site-section .flagship-section {
+  border-radius: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.466);
+}
+.site-section .flagship-section .sites {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+.site-section .flagship-section .sites .site {
+  text-align: center;
+  padding: 1.5rem;
+}
+.site-section .flagship-section .sites .site img {
+  width: 100%;
+}
+.site-section .flagship-section .sites .site a {
+  color: #ffffff;
+}
+@media screen and (max-width: 480px) {
+  .site-section .flagship-section .sites {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.site-section .payment-section {
+  border: 1px solid rgba(128, 128, 128, 0.466);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.site-section .payment-section img {
+  max-width: 100%;
+  width: 90%;
+}
+@media screen and (max-width: 960px) {
+  .site-section {
+    padding: 1rem;
+    grid-template-columns: 1fr;
   }
 }
 
