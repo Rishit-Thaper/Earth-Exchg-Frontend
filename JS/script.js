@@ -68,15 +68,6 @@ function animateOnScroll(elements) {
   });
 }
 
-function showPromptBox() {
-  document.getElementById("promptBox").style.display = "block";
-}
-
-function hidePromptBox() {
-  document.getElementById("promptBox").style.display = "none";
-}
-
-setTimeout(showPromptBox, 2000);
 
 const featureSections = document.querySelectorAll('.feature');
 const dealingSections = document.querySelectorAll('.dealing-section');
@@ -92,3 +83,26 @@ animateOnScroll(contactSections);
 animateOnScroll(whyusSection);
 animateOnScroll(siteSection);
 animateOnScroll(paymentSection);
+
+
+
+//form submitting
+function submitForm(event) {
+  event.preventDefault(); 
+  
+  var form = document.querySelector('form');
+  var formData = new FormData(form);
+  var xhr = new XMLHttpRequest();
+  
+  xhr.open("POST", form.action, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Handle the successful response, if needed
+      console.log(xhr.responseText);
+      alert("Your Login query has been submitted!");
+      form.reset();
+    }
+  };
+  
+  xhr.send(formData);
+}
