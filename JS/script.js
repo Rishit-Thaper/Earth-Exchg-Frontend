@@ -68,6 +68,16 @@ function animateOnScroll(elements) {
   });
 }
 
+function showPromptBox() {
+  document.getElementById("promptBox").style.display = "block";
+}
+
+function hidePromptBox() {
+  document.getElementById("promptBox").style.display = "none";
+}
+
+setTimeout(showPromptBox, 2000);
+
 const featureSections = document.querySelectorAll('.feature');
 const dealingSections = document.querySelectorAll('.dealing-section');
 const registerSections = document.querySelectorAll('.registration-section');

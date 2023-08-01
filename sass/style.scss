@@ -146,17 +146,14 @@ header{
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.759);
     align-items: center;
-    // background-image: url('../Rest/banner.jpg');
-    // background-position: center;
-    // background-size: cover;
+
     padding: 40px 6%;
 
     .animate__animated.animate__fadeIn{
         animation-duration: 2s;
     }
     .video-background{
-        // position: relative;
-        // overflow: hidden;
+
         video{
             position: absolute;
             z-index: -1;
@@ -603,4 +600,52 @@ header{
             justify-items: left;
         }
     }
+}
+
+.fixed-button{
+    background-color: #25d366;
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366; 
+        padding: 10px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 9999; 
+      
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 14px;
+          white-space: nowrap; 
+      
+          i {
+            font-size: 14px;
+            margin-right: 6px; 
+          }
+        }
+      
+        &:hover {
+          background-color: #128c7e; 
+        }
+    
+        @include sm{
+            bottom: 0px; 
+            left: 50%; 
+            transform: translateX(-50%);
+            padding: 5px; 
+            width: 100%;
+            border-radius: 0;
+            a {
+              color: #fff; 
+              font-size: 15px;
+            }
+      }
+
+}
+
 }

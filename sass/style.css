@@ -679,4 +679,48 @@ header .button #menu {
     grid-template-columns: 1fr;
     justify-items: left;
   }
+}
+
+.fixed-button {
+  background-color: #25d366;
+}
+.fixed-button .whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+}
+.fixed-button .whatsapp-button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.fixed-button .whatsapp-button a i {
+  font-size: 14px;
+  margin-right: 6px;
+}
+.fixed-button .whatsapp-button:hover {
+  background-color: #128c7e;
+}
+@media screen and (max-width: 480px) {
+  .fixed-button .whatsapp-button {
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    width: 100%;
+    border-radius: 0;
+  }
+  .fixed-button .whatsapp-button a {
+    color: #fff;
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
